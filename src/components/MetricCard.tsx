@@ -8,13 +8,13 @@ interface MetricCardProps {
   isPositive?: boolean
 }
 
-export const MetricCard: React.FC<MetricCardProps> = ({ 
+export const MetricCard = ({ 
   title, 
   value, 
   trend,
   trendValue,
   isPositive = true 
-}) => {
+}: MetricCardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 transition-all hover:shadow-xl">
       <h3 className="text-sm font-medium text-gray-500">{title}</h3>

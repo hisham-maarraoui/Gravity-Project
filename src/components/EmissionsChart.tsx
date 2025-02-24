@@ -1,7 +1,6 @@
-import * as React from 'react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts'
 
-export const EmissionsChart: React.FC = () => {
+export const EmissionsChart = () => {
   const data = [
     { source: 'Manufacturing', scope1: 85, scope2: 65, scope3: 45 },
     { source: 'Logistics', scope1: 65, scope2: 55, scope3: 35 },
