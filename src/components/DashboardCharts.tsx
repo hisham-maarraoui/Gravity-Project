@@ -1,11 +1,10 @@
-import * as React from 'react'
 import { BarChart, Bar, PieChart, Pie, Cell, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
 import { ResponsiveContainer } from 'recharts'
 import { CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts'
 
 const COLORS = ['#2563EB', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899']
 
-export const DashboardCharts: React.FC = () => {
+export const DashboardCharts = () => {
   const emissionsByDepartment = [
     { name: 'Manufacturing', value: 45 },
     { name: 'Logistics', value: 30 },
@@ -48,7 +47,7 @@ export const DashboardCharts: React.FC = () => {
                 dataKey="value"
                 label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
               >
-                {emissionsByDepartment.map((entry, index) => (
+                {emissionsByDepartment.map((_, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
               </Pie>

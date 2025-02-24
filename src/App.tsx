@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { EmissionsChart } from './components/EmissionsChart'
 import { MetricsOverview } from './components/MetricsOverview'
 import { DashboardCharts } from './components/DashboardCharts'
